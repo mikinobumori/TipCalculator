@@ -21,7 +21,7 @@ public class MainActivity extends Activity implements OnClickListener
 	TextView person3;
 	
 	EditText item1, item2, item3, tip;
-
+//miki does something
 	
 	Button calc;
 	
