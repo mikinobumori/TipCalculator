@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TipCalculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_tip_display">TipDisplayActivity</string>
+    <string name="tip_display_total">This is the string file total</string>
+    <string name="calculate">Calculate</string>
+
+</resources>
