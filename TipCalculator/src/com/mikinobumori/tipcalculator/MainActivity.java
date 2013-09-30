@@ -14,6 +14,8 @@ import android.widget.TextView;
 public class MainActivity extends Activity implements OnClickListener 
 {
 	
+	//This is a change that was created by tom
+	
 	TextView person1;
 	TextView person2;
 	TextView person3;
