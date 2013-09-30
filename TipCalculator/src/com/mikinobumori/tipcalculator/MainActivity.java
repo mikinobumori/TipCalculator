@@ -25,6 +25,8 @@ public class MainActivity extends Activity implements OnClickListener
 	
 	Button calc;
 	
+	//miki does another thing
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) 
     {
