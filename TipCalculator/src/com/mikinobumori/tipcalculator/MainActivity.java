@@ -91,6 +91,8 @@ public class MainActivity extends Activity implements OnClickListener
 			//Unfortunately, it can only display String values, so we need to convert all of our values to strings so it can be displayed in our
 			//Logging tool properly
 			
+			
+			//Is Git Working Now???
 			Log.d("person one percent is", String.valueOf(person1_percent));
 			Log.d("person two percent is", String.valueOf(person2_percent));
 			Log.d("person three percent is", String.valueOf(person3_percent));
