@@ -1,9 +1,9 @@
 package com.mikinobumori.tipcalculator;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,9 +20,8 @@ public class MainActivity extends Activity implements OnClickListener
 	TextView person2;
 	TextView person3;
 	
-	EditText item1;
-	EditText item2;
-	EditText item3;
+	EditText item1, item2, item3, tip;
+
 	
 	Button calc;
 	
@@ -39,6 +38,7 @@ public class MainActivity extends Activity implements OnClickListener
         item1 = (EditText) this.findViewById(R.id.main_item1_et);
         item2 = (EditText) this.findViewById(R.id.main_item2_et);
         item3 = (EditText) this.findViewById(R.id.main_item3_et);
+        tip = (EditText) this.findViewById(R.id.main_tip_percent_et);
         
         calc = (Button) this.findViewById(R.id.main_calc_b);
         
@@ -61,7 +61,8 @@ public class MainActivity extends Activity implements OnClickListener
 
 
 	@Override
-	public void onClick(View v) {
+	public void onClick(View v) 
+	{
 		// TODO Auto-generated method stub
 		if (v.getId() == R.id.main_calc_b)
 		{
@@ -70,14 +71,42 @@ public class MainActivity extends Activity implements OnClickListener
 			int item1_value = Integer.parseInt(item1.getText().toString());
 			int item2_value = Integer.parseInt(item2.getText().toString());
 			int item3_value = Integer.parseInt(item3.getText().toString());
+			int tip_percent = Integer.parseInt(tip.getText().toString());
 			
-			int total = item1_value + item2_value + item3_value;
+			double total = (double) (item1_value + item2_value + item3_value); //converting integer to double, so we can do fraction calculations
 			
-//			Toast.makeText(this, String.valueOf(total) , Toast.LENGTH_SHORT).show();
+			
+			double tip_percent_fraction =  (double) tip_percent / 100; //convert tip percent into a fraction, so we can do calculation
+			
+			Log.d("tip percent", String.valueOf(tip_percent_fraction));
+			
+			//do some math to start calculating what percentage each person owes
+			
+			double person1_percent = item1_value / total;
+			double person2_percent = item2_value / total;
+			double person3_percent = item3_value / total;
+			
+			//Log.d allows us to check in our LogCat (that little green icon) tracking tool information that is being handled in the background
+			//Unfortunately, it can only display String values, so we need to convert all of our values to strings so it can be displayed in our
+			//Logging tool properly
+			
+			Log.d("person one percent is", String.valueOf(person1_percent));
+			Log.d("person two percent is", String.valueOf(person2_percent));
+			Log.d("person three percent is", String.valueOf(person3_percent));
+			
+			double tip_amount = tip_percent_fraction * total;
+			
+			Log.d("calculated tip amount is", String.valueOf(tip_amount));
+						
 			Intent i = new Intent(this, TipDisplayActivity.class);
 			i.putExtra("total_label", total); //send total value to other activity through intent
 			this.startActivity(i);
 		}
+	}
+	
+	public void calculateTips()
+	{
+		//we can organize our code here later to calculate tips
 	}
 
 
