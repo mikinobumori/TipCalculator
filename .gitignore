@@ -15,6 +15,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+gen/
 
 # External tool builders
 .externalToolBuilders/
@@ -154,6 +155,10 @@ ClientBin/
 # RIA/Silverlight projects
 Generated_Code/
 
+libs/*
+gen/*
+bin/*
+
 # Backup & report files from converting an old project file to a newer
 # Visual Studio version. Backup files are not needed, because we have git ;-)
 _UpgradeReport_Files/
@@ -213,3 +218,5 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+*.class

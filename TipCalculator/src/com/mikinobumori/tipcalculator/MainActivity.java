@@ -80,6 +80,8 @@ public class MainActivity extends Activity implements OnClickListener
 			
 			Log.d("tip percent", String.valueOf(tip_percent_fraction));
 			
+			//testing git
+			
 			//do some math to start calculating what percentage each person owes
 			
 			double person1_percent = item1_value / total;
