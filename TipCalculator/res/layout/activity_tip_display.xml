@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,12 +16,80 @@
         android:text="@string/tip_display_total"
         android:id="@+id/tip_display_total_tv"
         android:gravity="center_horizontal"
-        android:textSize="30sp" />
+        android:textSize="30sp" />"
 
-    <ImageView
+    <TextView
+        android:id="@+id/tip_display_person1_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/pondelion"
-        android:id="@+id/tip_display_iv" />"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tip_display_total_tv"
+        android:padding="30dp"
+        android:text="Person1"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tip_display_person2_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tip_display_person1_tv"
+        android:padding="30dp"
+        android:text="Person2"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tip_display_person3_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tip_display_person2_tv"
+        android:padding="30dp"
+        android:text="Person3"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tip_display_person1_total_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tip_display_person1_tv"
+        android:layout_toRightOf="@+id/tip_display_person1_tv"
+        android:padding="30dp"
+        android:text="Price1"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tip_display_person2_total_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tip_display_person2_tv"
+        android:layout_toRightOf="@+id/tip_display_person2_tv"
+        android:padding="30dp"
+        android:text="Price2"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/tip_display_person3_total_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tip_display_person3_tv"
+        android:layout_toRightOf="@+id/tip_display_person3_tv"
+        android:padding="30dp"
+        android:text="Price3"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/tip_display_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/pondelion" />
+    
+</RelativeLayout>

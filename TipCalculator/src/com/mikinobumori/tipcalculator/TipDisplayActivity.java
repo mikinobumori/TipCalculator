@@ -14,6 +14,8 @@ public class TipDisplayActivity extends Activity implements OnClickListener
 {
 	TextView total_tv;
 	ImageView pondelion_iv;
+	
+	TextView person1, person2, person3, person1_total, person2_total, person3_total;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
@@ -26,6 +28,14 @@ public class TipDisplayActivity extends Activity implements OnClickListener
 		
 		total_tv = (TextView) this.findViewById(R.id.tip_display_total_tv);
 		total_tv.setText(String.valueOf(previousTotal)); //sets textview to total stored in value that was passed in from previous activity
+		
+		person1 = (TextView) this.findViewById(R.id.tip_display_person1_tv);
+		person2 = (TextView) this.findViewById(R.id.tip_display_person2_tv);
+		person3 = (TextView) this.findViewById(R.id.tip_display_person3_tv);
+		person1_total = (TextView) this.findViewById(R.id.tip_display_person1_total_tv);
+		person2_total = (TextView) this.findViewById(R.id.tip_display_person2_total_tv);
+		person3_total = (TextView) this.findViewById(R.id.tip_display_person3_total_tv);
+
 		pondelion_iv = (ImageView) this.findViewById(R.id.tip_display_iv);
 		pondelion_iv.setOnClickListener(this);
 	}
