@@ -25,6 +25,9 @@ public class TipDisplayActivity extends Activity implements OnClickListener
 		
 		Intent previousIntent = this.getIntent(); //gets intent from previous activity
 		int previousTotal = previousIntent.getIntExtra("total_label", 0);
+		double person1Total = previousIntent.getDoubleExtra("person1_total_key", 0);
+		double person2Total = previousIntent.getDoubleExtra("person2_total_key", 0);
+		double person3Total = previousIntent.getDoubleExtra("person3_total_key", 0);
 		
 		total_tv = (TextView) this.findViewById(R.id.tip_display_total_tv);
 		total_tv.setText(String.valueOf(previousTotal)); //sets textview to total stored in value that was passed in from previous activity
@@ -32,9 +35,15 @@ public class TipDisplayActivity extends Activity implements OnClickListener
 		person1 = (TextView) this.findViewById(R.id.tip_display_person1_tv);
 		person2 = (TextView) this.findViewById(R.id.tip_display_person2_tv);
 		person3 = (TextView) this.findViewById(R.id.tip_display_person3_tv);
+		
 		person1_total = (TextView) this.findViewById(R.id.tip_display_person1_total_tv);
+		person1_total.setText(String.valueOf(person1Total));
+		
 		person2_total = (TextView) this.findViewById(R.id.tip_display_person2_total_tv);
+		person2_total.setText(String.valueOf(person2Total));
+		
 		person3_total = (TextView) this.findViewById(R.id.tip_display_person3_total_tv);
+		person3_total.setText(String.valueOf(person3Total));
 
 		pondelion_iv = (ImageView) this.findViewById(R.id.tip_display_iv);
 		pondelion_iv.setOnClickListener(this);

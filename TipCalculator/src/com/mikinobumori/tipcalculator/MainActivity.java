@@ -103,9 +103,20 @@ public class MainActivity extends Activity implements OnClickListener
 			double tip_amount = tip_percent_fraction * total;
 			
 			Log.d("calculated tip amount is", String.valueOf(tip_amount));
+			
+			double total_with_tip = total + tip_amount;
+			
+			double person1_total = person1_percent * total_with_tip;
+			double person2_total = person2_percent * total_with_tip;
+			double person3_total = person3_percent * total_with_tip;
 						
 			Intent i = new Intent(this, TipDisplayActivity.class);
-			i.putExtra("total_label", total); //send total value to other activity through intent
+			//i.putExtra("total_label", total); //send total value to other activity through intent
+			
+			i.putExtra("person1_total_key", person1_total);
+			i.putExtra("person2_total_key", person2_total);
+			i.putExtra("person3_total_key", person3_total);
+			
 			this.startActivity(i);
 		}
 	}
