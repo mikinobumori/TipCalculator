@@ -22,6 +22,7 @@ public class MainActivity extends Activity implements OnClickListener
 	
 	EditText item1, item2, item3, tip;
 //miki does something
+	//tom does something
 	
 	Button calc;
 	
